@@ -14,7 +14,10 @@ export function hasMinimumRole(
   context: TenantContext,
   minimumRole: UserRole,
 ): boolean {
-  return ROLE_LEVEL[context.role] >= ROLE_LEVEL[minimumRole];
+  return (
+    ROLE_LEVEL[context.role] >=
+    ROLE_LEVEL[minimumRole]
+  );
 }
 
 export function assertSameOrganization(
