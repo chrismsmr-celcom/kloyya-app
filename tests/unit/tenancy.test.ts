@@ -52,7 +52,7 @@ describe('Multi-tenancy security', () => {
     ).toThrow('Workspace access denied');
   });
 
-  it('allows members to perform member-level operations', () => {
+  it('allows members to perform member operations', () => {
     expect(() =>
       assertRole(tenantA, 'member'),
     ).not.toThrow();
